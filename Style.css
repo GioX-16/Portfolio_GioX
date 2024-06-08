@@ -692,3 +692,6 @@ html {
     opacity: 1;
 }
 
+.portafolio .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0%;
+}
