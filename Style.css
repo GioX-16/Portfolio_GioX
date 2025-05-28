@@ -1134,131 +1134,104 @@ footer .arriba{
     display: none;
 }
 
-/* Estilos para el botón en la sección del video (escritorio) */
+
+.cv-button-container button {
+    cursor: pointer;
+    background-color: #0F2027;
+    border: 2px solid #fff;
+    padding: 10px 22px; 
+    font-size: 16px; 
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    border-radius: 30px; 
+    transition: all 0.3s ease;
+}
+
+.cv-button-container button:hover {
+    background-color: #1CB698;
+}
+
+.cv-button-container button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2C5364; 
+    z-index: -1;
+    transition: 1s;
+    border-radius: 30px;
+}
+
+.cv-button-container button:hover .overlay {
+    width: 100%;
+}
+
+.cv-button-container button i {
+    margin-left: 10px;
+}
+
+
 #hero1 .cv-button-container.desktop-only {
     position: absolute;
-    bottom: 10%; /* Posición en la parte inferior del video */
+    bottom: 10%; 
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: 10; 
     text-align: center;
-    width: auto;
+    width: auto; 
     max-width: none;
     margin: 0;
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 #hero1 .cv-button-container.desktop-only button {
-    cursor: pointer;
-    background-color: rgba(15, 32, 39, 0.8);
-    border: 2px solid #fff;
-    padding: 15px 30px;
-    font-size: 18px;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px 30px; 
+    font-size: 18px; 
 }
 
 #hero1 .cv-button-container.desktop-only button:hover {
-    background-color: #2C5364;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
 }
 
-#hero1 .cv-button-container.desktop-only button .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #1CB698;
-    z-index: -1;
-    transition: 1s;
-    border-radius: 30px;
-}
 
-#hero1 .cv-button-container.desktop-only button:hover .overlay {
-    width: 100%;
-}
-
-#hero1 .cv-button-container.desktop-only button i {
-    margin-left: 10px;
-}
-
-/* Estilos para el botón en la sección Sobre Mi (móvil) */
 #sobremi .cv-button-container.mobile-only {
     text-align: center;
-    margin: 20px auto; /* Centrar el contenedor del botón */
-    width: fit-content; /* Ajustar ancho al contenido */
-    display: block; /* Asegurar que ocupe su propio espacio */
-    position: static; /* O relative, para flujo normal */
-    top: auto;
+    margin: 20px auto; 
+    width: fit-content; 
+    display: block; 
+    position: static; 
     bottom: auto;
     left: auto;
     right: auto;
-    transform: none; /* Eliminar cualquier transformación */
+    transform: none; 
     z-index: auto;
 }
 
-#sobremi .cv-button-container.mobile-only button {
-    cursor: pointer;
-    background-color: #0F2027; /* Fondo sólido */
-    border: 2px solid #fff;
-    padding: 10px 22px;
-    font-size: 16px;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-    border-radius: 30px; /* Bordes redondeados */
-    transition: all 0.3s ease;
-}
 
-#sobremi .cv-button-container.mobile-only button:hover {
-    background-color: #1CB698;
-}
-
-#sobremi .cv-button-container.mobile-only button .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #2C5364; /* Color del overlay */
-    z-index: -1;
-    transition: 1s;
-    border-radius: 30px;
-}
-
-#sobremi .cv-button-container.mobile-only button:hover .overlay {
-    width: 100%;
-}
-
-#sobremi .cv-button-container.mobile-only button i {
-    margin-left: 10px;
-}
-
-/* Media query para controlar visibilidad */
 @media screen and (max-width: 980px) {
-    .desktop-only {
+    
+    #hero1 .cv-button-container.desktop-only {
         display: none;
     }
 
-    .mobile-only {
+    
+    #sobremi .cv-button-container.mobile-only {
         display: block;
     }
 
-    /* Asegurarse de que la sección #hero1 tenga position: relative */
+    
     #hero1 {
         position: relative;
-        /* Ajustar padding-bottom si es necesario para espacio con la siguiente sección */
-        padding-bottom: 20px; /* Puedes ajustar este valor */
+        
+        padding-bottom: 20px; 
     }
 
-    /* Asegurar que la sección Sobre Mi tenga suficiente espacio para el botón */
+    
     #sobremi .contenido-seccion {
-        padding-top: 20px; /* Añadir padding superior si es necesario */
+        padding-top: 20px; 
     }
 }
