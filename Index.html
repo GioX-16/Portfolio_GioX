@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Portafolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- MENU ENCABEZADO -->
+        <div class="contenedor-header">
+            <header>
+                <div class="logo">
+                    <a href="#"> ⎰ANDINO ♱</a>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#hero1"
+                                onclick="seleccionar()">INICIO</a></li>
+                        <li><a href="#inicio"
+                                onclick="seleccionar()">REDES</a></li>
+                        <li><a href="#portafolio"
+                                onclick="seleccionar()">PORTAFOLIO</a></li>
+                        <li><a href="#sobremi" onclick="seleccionar()">SOBRE
+                                MI</a></li>
+                        <li><a href="#skills"
+                                onclick="seleccionar()">HABILIDADES</a></li>
+                        <li><a href="#curriculum"
+                                onclick="seleccionar()">CURRICULUM</a></li>
+                        <li><a href="#contacto"
+                                onclick="seleccionar()">CONTACTO</a></li>
+                    </ul>
+
+                </nav>
+                <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </header>
+        </div>
+
+        <main id="hero1" class="hero1">
+            <video muted autoplay loop>
+                <source src="/img/videos/Backgro_Gix.mp4"
+                    type="video/mp4">
+            </video>
+            <!-- Botón para la sección del video (escritorio) -->
+            <div class="cv-button-container desktop-only">
+                <a href="https://drive.google.com/file/d/1Y2UJLk_8FMRIypF-gtLFCDbVqXgA6pda/view?usp=drive_link" target="noopener">
+                    <button>
+                        Descargar CV <i class="fa-solid fa-download"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </a>
+            </div>
+        </main>
+
+        <!--SECCION INICIO -->
+        <section id="inicio" class="inicio">
+            <div class="contenido-banner">
+                <div class="cv-button-container mobile-only">
+                    <a href="https://drive.google.com/file/d/1Y2UJLk_8FMRIypF-gtLFCDbVqXgA6pda/view?usp=drive_link" target="noopener">
+                        <button>
+                            Descargar CV <i class="fa-solid fa-download"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </a>
+                </div>
+                <div class="contenedor-img">
+                    <center><img src="img/herofull.png" alt></center>
+                </div>
+                <h1>GEOVANNY SANDINO</h1>
+                <h2>Ingeniero De Sistemas - Desarrollador Web - Diseñador
+                    UX/UI</h2>
+                <div class="redes">
+                    <a target="nooperner"
+                        href="https://www.facebook.com/g2.giox1"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a target="nooperner"
+                        href="https://www.instagram.com/sandi.giox/"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a target="nooperner" href="https://x.com/sandinoG1X"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a target="nooperner" href="https://github.com/GioX-16"><i
+                            class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="portafolio" class="portafolio">
+            <div class="contenido-seccion">
+                <h2>PORTAFOLIO</h2>
+                <div class="galeria">
+                    <div class="proyecto">
+                        <img src="img/Diseño figma.png" alt>
+                        <div class="overlay">
+                            <h3>Diseños</h3>
+                            <p>↴ </p><br>
+                            <a target="noopener"
+                                href="https://www.figma.com/design/risusO54Y8xsS3DxbghR1S/AgroMaps_Design?m=auto&t=81Nb05aPbkGyqfGP-6">FIGMA</a>
+                        </div>
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="img/AGROMAPS_PR1.png" alt>
+                        <div class="overlay">
+                            <h3>AgroMaps</h3>
+                            <p>↴ </p><br>
+                            <a target="noopener"
+                                href="https://github.com/GioX-16/Agro-Maps.git">Repositorio</a>
+                        </div>
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="img/ECCOMERCE_PR2.png" alt>
+                        <div class="overlay">
+                            <h3>Eccomerce</h3>
+                            <p>↴ </p><br>
+                            <a target="noopener"
+                                href="https://github.com/GioX-16/Deploy-Ecommerce-Website-GX_STORE-.git">Repositorio</a>
+                        </div>
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="img/NewFigma.png" alt>
+                        <div class="overlay">
+                            <h3>DISEÑO</h3>
+                            <!-- <p>para mejorar </p> -->
+                        </div>
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="img/LogoNavbar_SG1.png" alt>
+                        <div class="overlay">
+                            <h3>AGROMAPS</h3>
+                            <!-- <p>El tiempo al Trabajo es prioridad</p> -->
+                        </div>
+                    </div>
+
+                    <div class="proyecto">
+                        <img src="img/GGGGG.png" alt>
+                        <div class="overlay">
+                            <h3>ECCOMERCE</h3>
+                            <!-- <p>Importantisimo</p> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--SECCION SOBRE MI -->
+        <section id="sobremi" class="sobremi">
+            <div class="contenido-seccion">
+                <h2> Sobre Mi</h2>
+                <p><span>Hola - Hello - Привет. </span> Geovanny Daniel Sandino Gomez de 23 años,
+                    Joven estudiante de ingenieria cuyo objetivo es encontrar una empresa/Trabajo
+                    que permita aplicar y adquirir conocimientos en el area laboral y crecer de manera personal
+                    e intelectual.
+                </p>
+
+                <div class="fila">
+                    <!-- Datos personales -->
+                    <div class="col">
+                        <h3>Datos Personales</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <strong>Cumpleaños: </strong>
+                                16-12-2000
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <strong>Telefono: </strong>
+                                +505 8514-2553
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <strong>Email: </strong>
+                                sandinowork16@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <strong>Link-In: </strong>
+                                geovanny-sandino
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <strong>Direccion: </strong>
+                                Nicaragua - Managua - Distrito 7 - Grupo F ,
+                                Anden 7 , N. Casa 3491
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-building-columns"></i>
+                                <strong>Estudio:</strong><span>UNIVERSIDAD
+                                    NACIONAL DE ING</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Intereses -->
+                    <div class="col">
+                        <h3>Intereses: </h3>
+                        <div class="contenedor-intereses">
+                            <div class="intereses">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>JUEGOS</span>
+                            </div>
+                            <div class="intereses">
+                                <i class="fa-solid fa-headphones"></i>
+                                <span>MUSICA</span>
+                            </div>
+                            <div class="intereses">
+                                <i class="fa-solid fa-plane"></i>
+                                <span>VIAJES</span>
+                            </div>
+                            <div class="intereses">
+                                <i class="fa-brands fa-apple"></i>
+                                <span>MAC OS</span>
+                            </div>
+                            <div class="intereses">
+                                <i class="fa-solid fa-volleyball"></i>
+                                <span>DEPORTE</span>
+                            </div>
+                            <div class="intereses">
+                                <i class="fa-solid fa-book"></i>
+                                <span>LIBROS</span>
+                            </div>
+                            <div class="intereses">
+                                <i class="fa-solid fa-motorcycle"></i>
+                                <span>MOTOCICLETA</span>
+                            </div>
+                            <div class="intereses">
+                                <i class="fa-solid fa-camera"></i>
+                                <span>FOTOGRAFIA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botón para la sección Sobre Mi (móvil) -->
+                <div class="cv-button-container mobile-only">
+                    <a href="https://drive.google.com/file/d/1Y2UJLk_8FMRIypF-gtLFCDbVqXgA6pda/view?usp=drive_link" target="noopener">
+                        <button>
+                            Descargar CV <i class="fa-solid fa-download"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION SKILLS -->
+        <section class="skills" id="skills">
+            <div class="contenido-seccion">
+                <h2>Skills</h2>
+                <div class="fila">
+                    <!-- Technical Skill -->
+                    <div class="col">
+                        <h3>Habilidades Tecnicas</h3>
+                        <div class="skill">
+                            <span>Javascript</span>
+                            <div class="barra-skill">
+                                <div class="progreso javascript">
+                                    <span>85%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>HTML & CSS</span>
+                            <div class="barra-skill">
+                                <div class="progreso htmlcss">
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>Photoshop</span>
+                            <div class="barra-skill">
+                                <div class="progreso photoshop">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>CANVA</span>
+                            <div class="barra-skill">
+                                <div class="progreso canva">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>Lightroom</span>
+                            <div class="barra-skill">
+                                <div class="progreso lightroom">
+                                    <span>98%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>Microsoft Office</span>
+                            <div class="barra-skill">
+                                <div class="progreso office">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Profesional Skills  -->
+                    <div class="col">
+                        <h3>Habilidades Profesionales</h3>
+                        <div class="skill">
+                            <span>Comunicacion</span>
+                            <div class="barra-skill">
+                                <div class="progreso comunicacion">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>Liderazgo</span>
+                            <div class="barra-skill">
+                                <div class="progreso lider">
+                                    <span>85%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>Atencion</span>
+                            <div class="barra-skill">
+                                <div class="progreso atencion">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>Trabajo en equipo</span>
+                            <div class="barra-skill">
+                                <div class="progreso trabajoteam">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>Creatividad</span>
+                            <div class="barra-skill">
+                                <div class="progreso creatividad">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <span>Dedicacion</span>
+                            <div class="barra-skill">
+                                <div class="progreso dedicacion">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION CURRICULUM -->
+        <section id="curriculum" class="curriculum">
+            <div class="contenido-seccion">
+                <h2>Curriculum</h2>
+                <div class="fila">
+                    <div class="col izquierda">
+                        <h3> ꧁ EDUCACION ꧂ </h3>
+                        <div class="item izq">
+                            <h4>Ingeneria de Sistemas</h4>
+                            <span class="casa">Universidad Nacional de
+                                Ingenieria</span>
+                            <span class="fecha">2018 - CURSANDO</span>
+                            <p>La Universidad Nacional de Ingeniería (UNI)
+                                es una casa de estudios universitarios radicada
+                                en la
+                                ciudad de Managua, Nicaragua, estatal y
+                                autónoma,
+                                es reconocida por su minucioso y "selectivo"
+                                sistema de ingreso,
+                                a través de su examen de admisión con un alto
+                                componente en las
+                                materias de matemáticas y física.
+                            </p>
+                            <div class="conectori">
+                                <div class="circuloi"> </div>
+                            </div>
+                        </div>
+                        <div class="item izq">
+                            <h4>Bachiller en Ciencias y Letras</h4>
+                            <span class="casa">Colegio Republica de
+                                Venezuela</span>
+                            <span class="fecha">2012 - 2016 </span>
+                            <p>La Educación pública es la accesibilidad de toda
+                                la población a la educación y
+                                generar niveles de instrucción deseables para la
+                                obtención de una ventaja competitiva.
+                            </p>
+                            <div class="conectori">
+                                <div class="circuloi"> </div>
+                            </div>
+                        </div><div class="item izq">
+                            <h4>Educacion Primeraria</h4>
+                            <span class="casa">Republica de Venezuela</span>
+                            <span class="fecha">2006 - 2011 </span>
+                            <div class="conectori">
+                                <div class="circuloi"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col derecha">
+                        <h3> ꧁ EN APRENDIZAJE ꧂ </h3>
+                        <div class="item der">
+                            <h4>Q.A Tester</h4>
+                            <span class="casa">Curso Online</span>
+                            <span class="fecha">2025</span>
+                            <p> Uno de los campos de tecnologia que me gustaria
+                                especializarme es "Q.A Tester"
+                            </p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+
+                        <div class="item der">
+                            <h4>Ingles</h4>
+                            <span class="casa">Autodidacta</span>
+                            <span class="fecha">2025</span>
+                            <p> En aprendizaje actualmente el idioma ingles , ya
+                                que en muchas
+                                empresas de Programacion y desarrollo es un
+                                requisito nesesario.
+                            </p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+
+                        <div class="item der">
+                            <h4>Diseñador UX/UI</h4>
+                            <span class="casa">Autodidacta</span>
+                            <span class="fecha">2025</span>
+                            <p> Me encanta el diseño UX/UI actualmente estamos
+                                en aprendizaje con curso en Udemy.
+                            </p>
+                            <div class="conectord">
+                                <div class="circulod"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION CONTACTO  -->
+        <section id="contacto" class="contacto">
+            <div class="contenido-seccion">
+                <h2>CONTACTO</h2>
+                <div class="fila">
+                    <!--Fromulario-->
+                    <div class="col">
+                        <input type="text"
+                            placeholder="Geovanny Daniel Sandino Gomez">
+                        <input type="text" placeholder="+505 8514-2553">
+                        <input type="text"
+                            placeholder="sandinowork16@gmail.com">
+                        <input type="text" placeholder="Tema">
+                        <textarea name id cols="30" rows="10"
+                            placeholder="Mensaje"></textarea>
+                        <button>
+                            Enviar Mensaje
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </div>
+                    <!--Mapa-->
+                    <div class="col">
+                        <img src="img/Ubicacion.jpeg" alt>
+                        <div class="info">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Nicaragua - Managua - Villa Venezuela
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    Mobile: 8514-2503
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    Email: Sandinowork16@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+
+        <footer>
+            <a href="#inicio" class="arriba">
+                <i class="fa-solid fa-angles-up"></i>
+            </a>
+            <div class="redes">
+                <a target="nooperner"
+                    href="https://www.facebook.com/g2.giox1"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a target="nooperner"
+                    href="https://www.instagram.com/sandi.giox/"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a target="nooperner" href="https://x.com/sandinoG1X"><i
+                        class="fa-brands fa-twitter"></i></a>
+                <a target="nooperner" href="https://github.com/GioX-16"><i
+                        class="fa-brands fa-github"></i></a>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="animations.js"></script>
+    </body>
+</html>
