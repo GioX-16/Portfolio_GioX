@@ -127,7 +127,7 @@ video{
 
 /* SECCION INICIO */
 .inicio {
-    background: linear-gradient(to bottom, rgba(109, 118, 122, 0.8), rgb(35, 77, 95)),
+    background: linear-gradient(to top, rgba(156, 164, 168, 0.8), rgb(35, 77, 95)),
         url(img/FondoGX.jpeg); 
     background-size: 99%;
     height: 100vh;
