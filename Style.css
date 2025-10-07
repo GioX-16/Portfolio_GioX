@@ -138,7 +138,7 @@ video{
 
 .inicio .contenido-banner {
     padding: 20px;
-    background-color: #0F2027;
+    background-color: #050b0e;
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -147,7 +147,7 @@ video{
 
 .inicio .contenido-banner img {
     margin-top: 40px;
-    border: 10px solid #c9d3d0;
+    border: 2px solid #310303;
     display: block;
     width: 80%;
     margin: auto;
@@ -179,7 +179,7 @@ video{
 }
 
 .inicio .contenido-banner .redes a:hover {
-    background-color: #1CB698;
+    background-color: #310303;
 }
 
 .sobremi {
@@ -340,6 +340,12 @@ video{
 
 .skills h2 {
     font-size: 38px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.skills h3 {
+    font-size: 20px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
