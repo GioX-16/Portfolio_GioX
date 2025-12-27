@@ -1241,3 +1241,112 @@ footer .arriba{
         padding-top: 20px; 
     }
 }
+
+/* ================= CERTIFICATIONS ================= */
+
+.certifications {
+    background: linear-gradient(135deg, #0F2027, #2C5364);
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.certifications h2 {
+    font-size: 38px;
+    font-family: 'Righteous';
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* CONTENEDOR GENERAL */
+.cert-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* AREA VISIBLE (SOLO 3 CARDS) */
+.cert-track {
+    display: flex;
+    gap: 30px;
+    max-width: calc(280px * 3 + 30px * 2);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+/* CARD */
+.cert-card {
+    min-width: 280px;
+    background-color: #131517;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.cert-card img {
+    width: 100%;
+    display: block;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(28,182,152,0.4);
+}
+
+/* BOTONES */
+.cert-btn {
+    background-color: rgba(28, 182, 152, 0.25);
+    border: none;
+    color: #1CB698;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.cert-btn:hover {
+    background-color: #1CB698;
+    color: #0F2027;
+}
+
+/* =============== MODAL PDF ================= */
+
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+
+.cert-modal iframe {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.cert-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 900px) {
+    .cert-track {
+        max-width: 280px;
+    }
+}
