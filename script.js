@@ -66,3 +66,26 @@ function closeCert(){
     iframe.src = "";
     modal.style.display = "none";
 }
+
+// FUNCION PARA STACK TABS
+function openStack(evt, stackName) {
+    var i, tabContent, tabBtns;
+    
+    // Ocultar todos los paneles
+    tabContent = document.getElementsByClassName("tab-panel");
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+        tabContent[i].classList.remove("active");
+    }
+
+    // Quitar clase active de los botones
+    tabBtns = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].classList.remove("active");
+    }
+
+    // Mostrar panel actual y añadir clase active al botón
+    document.getElementById(stackName).style.display = "block";
+    document.getElementById(stackName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}

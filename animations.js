@@ -55,6 +55,16 @@ function handleScrollAnimations() {
             });
         }
     });
+
+    // Animaciones del Stack
+    const stackColumns = document.querySelectorAll('.stack .fila .col');
+    stackColumns.forEach(col => {
+        if (isElementInViewport(col)) {
+            col.classList.add('animate');
+        } else {
+            col.classList.remove('animate');
+        }
+    });
 }
 
 // Agregar el evento de scroll

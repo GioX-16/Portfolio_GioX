@@ -52,10 +52,11 @@ html {
     text-align: none;
     font-family: 'Righteous', Times, serif;
     color: #dde2e4;
-    margin: 0 15px;
+    margin: 0 10px; /* Reducido de 15px */
     padding: 3px;
     transition: .5s;
     text-decoration: none;
+    font-size: 14px; /* Un poco más pequeño para que quepa todo */
 }
 
 .contenedor-header header nav ul a:hover {
@@ -622,6 +623,168 @@ video{
     }
 }
 
+/* SECCION STACK TECNOLOGICO */
+.stack {
+    background-color: #0F2027;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.stack .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.stack h2 {
+    font-size: 38px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.stack h3 {
+    font-size: 24px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+    color: #1CB698;
+}
+
+.stack .fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stack .fila .col {
+    width: 32%;
+    background-color: #1a1f24;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.stack .fila .col.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contenedor-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.stack-item {
+    background-color: #252A2E;
+    padding: 20px 10px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.stack-item i {
+    font-size: 35px;
+    color: #1CB698;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stack-item span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+}
+
+/* REDESIGN STACK TABS */
+.stack-tabs {
+    margin-top: 30px;
+}
+
+.stack-tab-header {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: #1a1f24;
+    border: 2px solid #2C5364;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Righteous';
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: #1CB698;
+    border-color: #1CB698;
+    box-shadow: 0 0 15px rgba(28, 182, 152, 0.4);
+}
+
+.tab-panel {
+    display: none;
+    animation: fadeInTab 0.5s ease-in-out;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stack-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 12px;
+}
+
+.mini-stack-item {
+    background-color: #1a1f24;
+    padding: 15px 5px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #252A2E;
+    transition: all 0.3s ease;
+}
+
+.mini-stack-item i {
+    font-size: 28px;
+    color: #1CB698;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.mini-stack-item span {
+    font-size: 11px;
+    font-weight: 500;
+    color: #dde2e4;
+}
+
+.mini-stack-item:hover {
+    background-color: #252A2E;
+    transform: scale(1.05);
+    border-color: #1CB698;
+}
+
+.mini-stack-item:hover i {
+    transform: rotate(5deg);
+}
+
 /* SEECION CURRICULUM  */
 
 .curriculum {
@@ -1123,10 +1286,16 @@ footer .arriba{
     .portafolio .galeria .proyecto img{
         width: 100%;
     }
-    .contacto .fila{
-        display: block;
-    }
     .contacto .fila .col{
+        width: 100%;
+    }
+
+    .stack .fila {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .stack .fila .col {
         width: 100%;
     }
 }
