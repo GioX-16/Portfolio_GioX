@@ -30,10 +30,18 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    border: 1px solid #0F2027;
-    border-radius: 10px;
+    border: 1.5px solid #1CB698; /* Borde verde para destacar */
+    border-radius: 12px;
     margin-top: 10px;
-    background-color: #0F2027;
+    background-color: rgba(22, 45, 54, 0.95); /* Color ligeramente más claro y con transparencia */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque premium */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.contenedor-header header:hover {
+    border-color: #ffffff; /* Brilla al pasar el mouse */
+    background-color: rgba(30, 60, 72, 0.98);
 }
 
 .contenedor-header header .logo a {
@@ -1254,8 +1262,11 @@ footer .arriba{
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #0F2027;
+        background-color: rgba(22, 45, 54, 0.98); /* Match con el header */
         width: 180px;
+        border-radius: 0 0 10px 10px;
+        border: 1px solid #1CB698;
+        backdrop-filter: blur(10px);
     }
 
     nav.responsive ul{
