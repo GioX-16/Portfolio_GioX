@@ -1,6 +1,7 @@
-# PORTFOLIO SANDINO
-
-![welcome user](https://github.com/user-attachments/assets/19c63afa-55c9-4388-b272-c26ce3ee7033)
+# Portfolio web Sandino
 
 
-DesarrolloWEB  De mi Personal Portfolio
+<img width="1902" height="1047" alt="Screen portfolio" src="https://github.com/user-attachments/assets/dc89f5f5-dd6b-4568-8eb5-b916868b99d0" />
+
+
+Desarrollo Web propio
