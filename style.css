@@ -275,34 +275,49 @@ video{
 }
 
 .sobremi .fila .col .contenedor-intereses {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 15px;
     margin-top: 20px;
 }
 
 .sobremi .fila .col .contenedor-intereses .intereses {
-    width: 100px;
-    height: 100px;
+    height: 110px;
     background-color: #252A2E;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: .3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .sobremi .fila .col .contenedor-intereses .intereses:hover {
     background-color: #1CB698;
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(28, 182, 152, 0.4);
 }
 
 .sobremi .fila .col .contenedor-intereses .intereses i {
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 12px;
     color: #dadada;
+    transition: all 0.3s ease;
+}
+
+.sobremi .fila .col .contenedor-intereses .intereses span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sobremi .fila .col .contenedor-intereses .intereses:hover i {
+    color: #fff;
+    transform: scale(1.1);
 }
 
 .sobremi button {
@@ -1252,40 +1267,94 @@ footer .arriba{
 /* SECCION RESPONSIVE  */
 @media screen and (max-width:980px){
     nav{
-        display: none;
+        position: absolute;
+        right: 20px;
+        top: 85px;
+        background-color: rgba(22, 45, 54, 0.98);
+        width: 220px;
+        border-radius: 15px;
+        border: 1.5px solid #1CB698;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        
+        /* Animación Premium */
+        clip-path: circle(0% at 100% 0%);
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
     }
+    
     .nav-responsive{
         display: block;
+        transition: all 0.3s ease;
     }
+
+    .nav-responsive:active {
+        transform: scale(0.9);
+    }
+
     nav.responsive{
         display: block;
-        position: absolute;
-        right: 0;
-        top: 75px;
-        background-color: rgba(22, 45, 54, 0.98); /* Match con el header */
-        width: 180px;
-        border-radius: 0 0 10px 10px;
-        border: 1px solid #1CB698;
-        backdrop-filter: blur(10px);
+        clip-path: circle(150% at 100% 0%);
+        opacity: 1;
+        visibility: visible;
     }
 
-    nav.responsive ul{
+    nav ul{
         display: block !important;
+        padding: 15px 0;
     }
 
-    nav.responsive ul li{
-        border-bottom: 1px  solid #c9d3d0;
-        padding: 10px 0;
+    nav ul li{
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li a{
+        display: block;
+        padding: 12px 25px;
+        margin: 5px 15px !important;
+        border-radius: 10px;
+        background: transparent;
+        transition: all 0.3s ease;
+        border-bottom: none !important;
+        font-size: 15px !important;
+    }
+
+    nav ul li a:hover {
+        background: rgba(28, 182, 152, 0.15);
+        color: #1CB698 !important;
+        transform: translateX(10px);
     }
 }
 @media screen and (max-width:700px) {
+    .inicio {
+        height: auto;
+        padding: 100px 0;
+    }
+
+    .inicio .contenido-banner {
+        max-width: 90%;
+    }
+
     .sobremi .fila {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
+    }
+
+    .sobremi h2 {
+        font-size: 36px;
     }
 
     .sobremi .fila .col {
         width: 100%;
+        padding: 15px;
+    }
+
+    .sobremi .fila .col .contenedor-intereses {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .skills .fila {
@@ -1294,41 +1363,81 @@ footer .arriba{
 
     .skills .fila .col {
         width: 100%;
+        margin-bottom: 30px;
+        padding: 0;
         animation-delay: 0.2s !important;
+    }
+
+    .skills .skill .barra-skill {
+        width: 100%;
     }
 
     .curriculum .fila{
         display: block;
     }
     .curriculum .fila .col{
-        width: 90%;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0;
     }
     .curriculum .fila .derecha{
-        margin-left: 20px;
+        margin-left: 0;
+        border-left: none;
+    }
+    .curriculum .fila .izquierda{
+        border-right: none;
     }
 
     .portafolio .galeria{
-        display: block;
-        width: 100%;
-    }
-    .portafolio .galeria .proyecto {
-        max-width: 100%;
-        animation-delay: 0.2s !important; /* Ajusta el retraso para móviles */
-    }
-    .portafolio .galeria .proyecto img{
-        width: 100%;
-    }
-    .contacto .fila .col{
-        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
     }
 
-    .stack .fila {
-        flex-direction: column;
-        gap: 30px;
+    .portafolio .galeria .proyecto {
+        max-width: 100%;
+        margin: 0;
+        animation-delay: 0.2s !important;
     }
 
     .stack .fila .col {
         width: 100%;
+    }
+
+    /* Mejora Certificaciones Responsive */
+    .certifications h2 {
+        font-size: 32px;
+    }
+
+    .cert-slider {
+        flex-direction: column; /* Botones abajo en pantallas muy pequeñas */
+        gap: 20px;
+    }
+
+    .cert-track {
+        max-width: 100%;
+        width: 85vw; /* Más fluido en diferentes tamaños de móvil */
+        gap: 15px;
+        overflow-x: auto; /* Permitir scroll táctil */
+        scroll-snap-type: x mandatory; /* Efecto imán al deslizar */
+    }
+
+    .cert-card {
+        min-width: 85vw; /* Cada card ocupa el ancho del track */
+        scroll-snap-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .cert-btn {
+        margin: 0 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .cert-track::-webkit-scrollbar {
+        display: none; /* Ocultar scrollbar pero permitir swipe */
     }
 }
 

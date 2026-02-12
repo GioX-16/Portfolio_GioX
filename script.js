@@ -47,8 +47,12 @@ window.onscroll = function(){
 // Scroll preciso: 1 card por click
 function scrollCert(direction){
     const track = document.getElementById("certTrack");
-    const cardWidth = 280 + 30; // ancho card + gap
-    track.scrollLeft += direction * cardWidth;
+    const card = track.querySelector(".cert-card");
+    const cardWidth = card.offsetWidth + 20; // ancho card + gap aproximado
+    track.scrollBy({
+        left: direction * cardWidth,
+        behavior: 'smooth'
+    });
 }
 
 // Abrir PDF
