@@ -93,3 +93,36 @@ function openStack(evt, stackName) {
     document.getElementById(stackName).classList.add("active");
     evt.currentTarget.classList.add("active");
 }
+
+// ================= CAMBIO DE TEMA =================
+
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById("themeIcon");
+    
+    if (body.getAttribute("data-theme") === "light") {
+        body.setAttribute("data-theme", "dark");
+        themeIcon.className = "fa-solid fa-moon";
+        localStorage.setItem("theme", "dark");
+    } else {
+        body.setAttribute("data-theme", "light");
+        themeIcon.className = "fa-solid fa-sun";
+        localStorage.setItem("theme", "light");
+    }
+}
+
+function initTheme() {
+    const savedTheme = localStorage.getItem("theme");
+    const themeIcon = document.getElementById("themeIcon");
+    
+    if (savedTheme) {
+        document.body.setAttribute("data-theme", savedTheme);
+        if (savedTheme === "light") {
+            themeIcon.className = "fa-solid fa-sun";
+        }
+    } else {
+        document.body.setAttribute("data-theme", "dark");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", initTheme);
