@@ -21,6 +21,12 @@
                     <a href="#"> SANDINO </a>
                 </div>
                 <nav id="nav">
+                    <div class="mobile-lang-selector">
+                        <button class="mobile-lang-btn" onclick="toggleLanguage()">
+                            <i class="fa-solid fa-globe"></i>
+                            <span id="mobileLangText">ES</span>
+                        </button>
+                    </div>
                     <ul>
                         <li><a href="#hero1"
                                 onclick="seleccionar()">INICIO</a></li>
@@ -738,6 +744,11 @@
             <i class="fa-brands fa-whatsapp"></i>
             <span class="tooltip-whatsapp">¡Contáctame!</span>
         </a>
+
+        <!-- BOTON FLOTANTE CAMBIO DE IDIOMA -->
+        <button class="lang-btn" id="langBtn" onclick="toggleLanguage()" aria-label="Cambiar idioma">
+            <span class="lang-text" id="langText">ES</span>
+        </button>
 
         <!-- BOTON FLOTANTE CAMBIO DE TEMA -->
         <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Cambiar tema">

@@ -1797,7 +1797,7 @@ footer .arriba{
     border-radius: 50%;
     font-size: 24px;
     box-shadow: 0 4px 15px var(--shadow);
-    z-index: 100;
+    z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1825,5 +1825,91 @@ footer .arriba{
         font-size: 24px;
         bottom: 25px;
         left: 20px;
+    }
+}
+
+/* --- BOTÓN FLOTANTE CAMBIO DE IDIOMA (ESCRITORIO) --- */
+.lang-btn {
+    position: fixed;
+    bottom: 95px;
+    left: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: var(--bg-secondary);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px var(--shadow);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--accent);
+    color: var(--text-primary);
+    box-shadow: 0 6px 20px var(--shadow);
+}
+
+.lang-btn .lang-text {
+    font-family: 'Righteous', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.lang-btn:hover .lang-text {
+    color: var(--text-primary);
+}
+
+/* Ocultar botón flotante en móvil */
+@media screen and (max-width: 980px) {
+    .lang-btn {
+        display: none;
+    }
+}
+
+/* --- SELECTOR DE IDIOMA EN MENÚ MÓVIL --- */
+.mobile-lang-selector {
+    display: none;
+    padding: 15px 25px;
+    border-bottom: 1px solid var(--accent);
+}
+
+.mobile-lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Righteous', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.mobile-lang-btn:hover,
+.mobile-lang-btn:active {
+    background-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.mobile-lang-btn i {
+    font-size: 18px;
+}
+
+/* Mostrar selector solo en móvil */
+@media screen and (max-width: 980px) {
+    .mobile-lang-selector {
+        display: block;
     }
 }
