@@ -146,14 +146,85 @@ const translations = {
         sobremi_intro: "Hola - Hello - Привет. Geovanny Daniel Sandino Gomez de 23 años, Joven estudiante de ingenieria cuyo objetivo es encontrar una empresa/Trabajo que permita aplicar y adquirir conocimientos en el area laboral y crecer de manera personal e intelectual.",
         sobremi_datos: "Datos Personales",
         sobremi_intereses: "Intereses:",
+        sobremi_cumple: "Cumpleaños:",
+        sobremi_telefono: "Telefono:",
+        sobremi_email: "Email:",
+        sobremi_linkedin: "Link-In:",
+        sobremi_direccion: "Direccion:",
+        sobremi_estudio: "Estudio:",
         skills_title: "Habilidades",
         skills_dev: "Habilidades de Desarrollador",
         skills_prof: "Habilidades Profesionales",
+        skills_javascript: "JAVASCRIPT",
+        skills_frontend: "FRONTEND",
+        skills_react: "REACT",
+        skills_backend: "BACKEND",
+        skills_git: "GIT",
+        skills_ui: "DISEÑO DE INTERFACES DE USUARIOS",
+        skills_comunicacion: "Comunicacion",
+        skills_liderazgo: "Liderazgo",
+        skills_atencion: "Atencion",
+        skills_trabajo: "Trabajo en equipo",
+        skills_creatividad: "Creatividad",
+        skills_dedicacion: "Dedicacion",
+        intereses_juegos: "JUEGOS",
+        intereses_musica: "MUSICA",
+        intereses_viajes: "VIAJES",
+        intereses_mac: "MAC OS",
+        intereses_deporte: "DEPORTE",
+        intereses_libros: "LIBROS",
+        intereses_moto: "MOTOCICLETA",
+        intereses_foto: "FOTOGRAFIA",
         stack_title: "STACK TECNOLÓGICO",
+        stack_design: "Diseño & Herramientas",
+        stack_frontend: "Front-end",
+        stack_backend: "Back-end",
         cert_title: "CERTIFICACIONES",
+        portafolio_title: "PORTAFOLIO",
+        portafolio_proy1_title: "Diseño App Movil",
+        portafolio_proy1_link: "DISEÑO ECONIC",
+        portafolio_proy2_title: "Diseño de Web IDV",
+        portafolio_proy2_link: "DISEÑO IDV",
+        portafolio_proy3_title: "Desarrollo de Web IDV",
+        portafolio_proy3_link: "WEB IDV",
+        portafolio_proy4_title: "App Movil Agromaps",
+        portafolio_proy4_link: "AGROMAPS",
+        portafolio_proy5_title: "Eccomerce",
+        portafolio_proy5_link: "Repositorio",
+        portafolio_proy6_title: "AgroMaps",
+        portafolio_proy6_link: "Web",
+        portafolio_proy7_title: "Diseño de Prueba AppBank",
+        portafolio_proy7_link: "Diseño de Prueba",
+        portafolio_proy8_title: "Desarrollo Web",
+        portafolio_proy8_link: "Desarrollado By SOFT-IA TEAM",
+        portafolio_proy9_title: "SOON",
+        portafolio_proy9_link: "Nuevo proyecto en Desarrollo",
+        portafolio_proy10_title: "DISEÑO",
+        portafolio_proy10_link: "",
+        portafolio_proy11_title: "SOFIA TEAM",
+        portafolio_proy11_link: "Desarrollado By SOFIA TEAM",
+        portafolio_proy12_title: "ECCOMERCE",
+        portafolio_proy12_link: "",
         cv_title: "Curriculum",
         cv_educacion: "꧁ EDUCACION ꧂",
         cv_aprendizaje: "꧁ EN APRENDIZAJE ꧂",
+        cv_ingenieria: "Ingeneria de Sistemas",
+        cv_uni: "Universidad Nacional de Ingenieria",
+        cv_uni_desc: "La Universidad Nacional de Ingeniería (UNI) es una casa de estudios universitarios radicada en la ciudad de Managua, Nicaragua, estatal y autónoma, es reconocida por su minucioso y 'selectivo' sistema de ingreso, a través de su examen de admisión con un alto componente en las materias de matemáticas y física.",
+        cv_bachiller: "Bachiller en Ciencias y Letras",
+        cv_colegio: "Colegio Republica de Venezuela",
+        cv_edu_desc: "La Educación pública es la accesibilidad de toda la población a la educación y generar niveles de instrucción deseables para la obtención de una ventaja competitiva.",
+        cv_primaria: "Educacion Primeraria",
+        cv_republica: "Republica de Venezuela",
+        cv_cursando: "2018 - CURSANDO",
+        cv_apps: "Desarrollo de Apps Multiplataforma",
+        cv_curso: "Curso Online",
+        cv_apps_desc: "Uno de los campos de tecnologia que me gustaria especializarme es 'Desarrollo de Apps Multiplataforma'",
+        cv_ingles: "Ingles",
+        cv_autodidacta: "Autodidacta",
+        cv_ingles_desc: "En aprendizaje actualmente el idioma ingles, ya que en muchas empresas de Programacion y desarrollo es un requisito nesesario.",
+        cv_uxui: "Diseñador UX/UI",
+        cv_uxui_desc: "Actualmente constamos con una certificacion de la academia online Udemy.",
         whatsapp_tooltip: "¡Contáctame!",
         lang_label: "ES"
     },
@@ -173,14 +244,86 @@ const translations = {
         sobremi_intro: "Hi - Hello - Привет. Geovanny Daniel Sandino Gomez, 23 years old, a young engineering student whose goal is to find a company/Job that allows applying and acquiring knowledge in the work area and grow personally and intellectually.",
         sobremi_datos: "Personal Data",
         sobremi_intereses: "Interests:",
+        sobremi_cumple: "Birthday:",
+        sobremi_telefono: "Phone:",
+        sobremi_email: "Email:",
+        sobremi_linkedin: "LinkedIn:",
+        sobremi_direccion: "Address:",
+        sobremi_estudio: "Education:",
         skills_title: "Skills",
         skills_dev: "Developer Skills",
         skills_prof: "Professional Skills",
+        skills_javascript: "JAVASCRIPT",
+        skills_frontend: "FRONTEND",
+        skills_react: "REACT",
+        skills_backend: "BACKEND",
+        skills_git: "GIT",
+        skills_ui: "UI/UX DESIGN",
+        skills_comunicacion: "Communication",
+        skills_liderazgo: "Leadership",
+        skills_atencion: "Attention to Detail",
+        skills_trabajo: "Teamwork",
+        skills_creatividad: "Creativity",
+        skills_dedicacion: "Dedication",
+        intereses_juegos: "GAMES",
+        intereses_musica: "MUSIC",
+        intereses_viajes: "TRAVEL",
+        intereses_mac: "MAC OS",
+        intereses_deporte: "SPORTS",
+        intereses_libros: "BOOKS",
+        intereses_moto: "MOTORCYCLE",
+        intereses_foto: "PHOTOGRAPHY",
         stack_title: "TECHNOLOGICAL STACK",
+        stack_design: "Design & Tools",
+        stack_frontend: "Front-end",
+        stack_backend: "Back-end",
         cert_title: "CERTIFICATIONS",
+        portafolio_title: "PORTFOLIO",
+        portafolio_proy1_title: "Mobile App Design",
+        portafolio_proy1_link: "ECONIC DESIGN",
+        portafolio_proy2_title: "IDV Web Design",
+        portafolio_proy2_link: "IDV DESIGN",
+        portafolio_proy3_title: "IDV Web Development",
+        portafolio_proy3_link: "IDV WEB",
+        portafolio_proy4_title: "Agromaps Mobile App",
+        portafolio_proy4_link: "AGROMAPS",
+        portafolio_proy5_title: "Ecommerce",
+        portafolio_proy5_link: "Repository",
+        portafolio_proy6_title: "AgroMaps",
+        portafolio_proy6_link: "Web",
+        portafolio_proy7_title: "AppBank Test Design",
+        portafolio_proy7_link: "Test Design",
+        portafolio_proy8_title: "Web Development",
+        portafilio_proy8_link: "Developed By SOFT-IA TEAM",
+        portafolio_proy8_link: "Developed By SOFT-IA TEAM",
+        portafolio_proy9_title: "SOON",
+        portafolio_proy9_link: "New Project in Development",
+        portafolio_proy10_title: "DESIGN",
+        portafolio_proy10_link: "",
+        portafolio_proy11_title: "SOFIA TEAM",
+        portafolio_proy11_link: "Developed By SOFIA TEAM",
+        portafolio_proy12_title: "ECOMMERCE",
+        portafolio_proy12_link: "",
         cv_title: "Curriculum",
         cv_educacion: "꧁ EDUCATION ꧂",
         cv_aprendizaje: "꧁ LEARNING ꧂",
+        cv_ingenieria: "Systems Engineering",
+        cv_uni: "National University of Engineering",
+        cv_uni_desc: "The National University of Engineering (UNI) is a university located in Managua, Nicaragua, state-owned and autonomous. It is recognized for its thorough and selective admission system, through its entrance exam with a high component in mathematics and physics.",
+        cv_bachiller: "High School Diploma in Sciences and Letters",
+        cv_colegio: "Republic of Venezuela School",
+        cv_edu_desc: "Public education is the accessibility of the entire population to education and generating desirable instruction levels for obtaining a competitive advantage.",
+        cv_primaria: "Primary Education",
+        cv_republica: "Republic of Venezuela",
+        cv_cursando: "2018 - IN PROGRESS",
+        cv_apps: "Cross-Platform App Development",
+        cv_curso: "Online Course",
+        cv_apps_desc: "One of the technology fields I would like to specialize in is 'Cross-Platform App Development'",
+        cv_ingles: "English",
+        cv_autodidacta: "Self-taught",
+        cv_ingles_desc: "Currently learning English, as in many Programming and development companies it is a necessary requirement.",
+        cv_uxui: "UX/UI Designer",
+        cv_uxui_desc: "We currently have a certification from the online academy Udemy.",
         whatsapp_tooltip: "Contact me!",
         lang_label: "EN"
     }
@@ -230,6 +373,31 @@ function applyTranslations(lang) {
     const bannerH2 = document.querySelector('#inicio .contenido-banner h2');
     if (bannerH2) bannerH2.textContent = t.redes_subtitle;
     
+    const portafolioH2 = document.querySelector('#portafolio h2');
+    if (portafolioH2) portafolioH2.textContent = t.portafolio_title;
+    
+    const portafolioProyectos = document.querySelectorAll('#portafolio .proyecto .overlay');
+    const proyectos = [
+        { title: t.portafolio_proy1_title, link: t.portafolio_proy1_link },
+        { title: t.portafolio_proy2_title, link: t.portafolio_proy2_link },
+        { title: t.portafolio_proy3_title, link: t.portafolio_proy3_link },
+        { title: t.portafolio_proy4_title, link: t.portafolio_proy4_link },
+        { title: t.portafolio_proy5_title, link: t.portafolio_proy5_link },
+        { title: t.portafolio_proy6_title, link: t.portafolio_proy6_link },
+        { title: t.portafolio_proy7_title, link: t.portafolio_proy7_link },
+        { title: t.portafolio_proy8_title, link: t.portafolio_proy8_link },
+        { title: t.portafolio_proy9_title, link: t.portafolio_proy9_link },
+        { title: t.portafolio_proy10_title, link: t.portafolio_proy10_link },
+        { title: t.portafolio_proy11_title, link: t.portafolio_proy11_link },
+        { title: t.portafolio_proy12_title, link: t.portafolio_proy12_link }
+    ];
+    portafolioProyectos.forEach((proy, i) => {
+        const h3 = proy.querySelector('h3');
+        const link = proy.querySelector('a');
+        if (h3) h3.textContent = proyectos[i].title;
+        if (link && proyectos[i].link) link.textContent = proyectos[i].link;
+    });
+    
     const sobremiH2 = document.querySelector('#sobremi h2');
     if (sobremiH2) sobremiH2.textContent = t.sobremi_title;
     
@@ -240,6 +408,20 @@ function applyTranslations(lang) {
     if (sobremiColH3s[0]) sobremiColH3s[0].textContent = t.sobremi_datos;
     if (sobremiColH3s[1]) sobremiColH3s[1].textContent = t.sobremi_intereses;
     
+    const sobremiDatos = document.querySelectorAll('#sobremi .fila .col ul li strong');
+    if (sobremiDatos[0]) sobremiDatos[0].textContent = t.sobremi_cumple;
+    if (sobremiDatos[1]) sobremiDatos[1].textContent = t.sobremi_telefono;
+    if (sobremiDatos[2]) sobremiDatos[2].textContent = t.sobremi_email;
+    if (sobremiDatos[3]) sobremiDatos[3].textContent = t.sobremi_linkedin;
+    if (sobremiDatos[4]) sobremiDatos[4].textContent = t.sobremi_direccion;
+    if (sobremiDatos[5]) sobremiDatos[5].textContent = t.sobremi_estudio;
+    
+    const intereses = document.querySelectorAll('#sobremi .contenedor-intereses .intereses span');
+    const interesesKeys = ['intereses_juegos', 'intereses_musica', 'intereses_viajes', 'intereses_mac', 'intereses_deporte', 'intereses_libros', 'intereses_moto', 'intereses_foto'];
+    intereses.forEach((int, i) => {
+        if (t[interesesKeys[i]]) int.textContent = t[interesesKeys[i]];
+    });
+    
     const skillsH2 = document.querySelector('#skills h2');
     if (skillsH2) skillsH2.textContent = t.skills_title;
     
@@ -247,8 +429,19 @@ function applyTranslations(lang) {
     if (skillsH3s[0]) skillsH3s[0].textContent = t.skills_dev;
     if (skillsH3s[1]) skillsH3s[1].textContent = t.skills_prof;
     
+    const skillSpans = document.querySelectorAll('#skills .skill > span');
+    const skillKeys = ['skills_javascript', 'skills_frontend', 'skills_react', 'skills_backend', 'skills_git', 'skills_ui', 'skills_comunicacion', 'skills_liderazgo', 'skills_atencion', 'skills_trabajo', 'skills_creatividad', 'skills_dedicacion'];
+    skillSpans.forEach((skill, i) => {
+        if (t[skillKeys[i]]) skill.textContent = t[skillKeys[i]];
+    });
+    
     const stackH2 = document.querySelector('#stack h2');
     if (stackH2) stackH2.textContent = t.stack_title;
+    
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    if (tabBtns[0]) tabBtns[0].textContent = t.stack_design;
+    if (tabBtns[1]) tabBtns[1].textContent = t.stack_frontend;
+    if (tabBtns[2]) tabBtns[2].textContent = t.stack_backend;
     
     const certH2 = document.querySelector('#certifications h2');
     if (certH2) certH2.textContent = t.cert_title;
@@ -259,6 +452,38 @@ function applyTranslations(lang) {
     const cvH3s = document.querySelectorAll('#curriculum .fila .col h3');
     if (cvH3s[0]) cvH3s[0].textContent = t.cv_educacion;
     if (cvH3s[1]) cvH3s[1].textContent = t.cv_aprendizaje;
+    
+    const cvItems = document.querySelectorAll('#curriculum .item');
+    if (cvItems[0]) {
+        cvItems[0].querySelector('h4').textContent = t.cv_ingenieria;
+        cvItems[0].querySelector('.casa').textContent = t.cv_uni;
+        cvItems[0].querySelector('.fecha').textContent = t.cv_cursando;
+        cvItems[0].querySelector('p').textContent = t.cv_uni_desc;
+    }
+    if (cvItems[1]) {
+        cvItems[1].querySelector('h4').textContent = t.cv_bachiller;
+        cvItems[1].querySelector('.casa').textContent = t.cv_colegio;
+        cvItems[1].querySelector('p').textContent = t.cv_edu_desc;
+    }
+    if (cvItems[2]) {
+        cvItems[2].querySelector('h4').textContent = t.cv_primaria;
+        cvItems[2].querySelector('.casa').textContent = t.cv_republica;
+    }
+    if (cvItems[3]) {
+        cvItems[3].querySelector('h4').textContent = t.cv_apps;
+        cvItems[3].querySelector('.casa').textContent = t.cv_curso;
+        cvItems[3].querySelector('p').textContent = t.cv_apps_desc;
+    }
+    if (cvItems[4]) {
+        cvItems[4].querySelector('h4').textContent = t.cv_ingles;
+        cvItems[4].querySelector('.casa').textContent = t.cv_autodidacta;
+        cvItems[4].querySelector('p').textContent = t.cv_ingles_desc;
+    }
+    if (cvItems[5]) {
+        cvItems[5].querySelector('h4').textContent = t.cv_uxui;
+        cvItems[5].querySelector('.casa').textContent = t.cv_autodidacta;
+        cvItems[5].querySelector('p').textContent = t.cv_uxui_desc;
+    }
 }
 
 function initLanguage() {
