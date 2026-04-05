@@ -393,15 +393,23 @@ function applyTranslations(lang) {
     portafolioProyectos.forEach((proy, i) => {
         const h3 = proy.querySelector('h3');
         const link = proy.querySelector('a');
+        const span = proy.querySelector('span');
         if (h3) h3.textContent = proyectos[i].title;
-        if (link && proyectos[i].link) link.textContent = proyectos[i].link;
+        if (link && proyectos[i].link) {
+            link.textContent = proyectos[i].link;
+            link.style.display = 'inline';
+        } else if (span && proyectos[i].link) {
+            span.textContent = proyectos[i].link;
+        } else if (link) {
+            link.style.display = 'none';
+        }
     });
     
     const sobremiH2 = document.querySelector('#sobremi h2');
     if (sobremiH2) sobremiH2.textContent = t.sobremi_title;
     
     const sobremiP = document.querySelector('#sobremi .contenido-seccion p');
-    if (sobremiP) sobremiP.innerHTML = `<span>${t.sobremi_intro.split(' - ')[0]}</span> ${t.sobremi_intro}`;
+    if (sobremiP) sobremiP.innerHTML = `<span>${t.sobremi_intro.split(' - ')[0]}</span> - ${t.sobremi_intro.split(' - ').slice(1).join(' - ')}`;
     
     const sobremiColH3s = document.querySelectorAll('#sobremi .fila .col h3');
     if (sobremiColH3s[0]) sobremiColH3s[0].textContent = t.sobremi_datos;
