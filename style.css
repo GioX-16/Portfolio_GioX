@@ -1115,9 +1115,25 @@ video{
     }
 }
 
-.portafolio .galeria .proyecto a{
-    color: var(--text-muted);
-    font-family: 'Times New Roman', Times, serif;
+.portafolio .galeria .proyecto a,
+.portafolio .galeria .proyecto span{
+    color: var(--accent);
+    font-family: 'Righteous', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.portafolio .galeria .proyecto a:hover,
+.portafolio .galeria .proyecto span:hover{
+    transform: translateX(5px);
+}
+
+.portafolio .galeria .proyecto a:hover::after,
+.portafolio .galeria .proyecto span:hover::after{
+    margin-left: 5px;
 }
 
 .portafolio .galeria .proyecto img{
