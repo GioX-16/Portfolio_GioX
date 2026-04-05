@@ -143,7 +143,7 @@ const translations = {
         redes_title: "GIOVANNY SANDINO",
         redes_subtitle: "Ingeniero De Sistemas - Desarrollador Web - Diseñador UX/UI",
         sobremi_title: "Sobre Mi",
-        sobremi_intro: "Hola - Hello - Привет. Geovanny Daniel Sandino Gomez de 23 años, Joven estudiante de ingenieria cuyo objetivo es encontrar una empresa/Trabajo que permita aplicar y adquirir conocimientos en el area laboral y crecer de manera personal e intelectual.",
+        sobremi_intro: "Hola Mi nombre es Geovanny Daniel Sandino Gomez, Joven estudiante de ingenieria cuyo objetivo es encontrar una empresa/Trabajo que permita aplicar y adquirir conocimientos en el area laboral y crecer de manera personal e intelectual.",
         sobremi_datos: "Datos Personales",
         sobremi_intereses: "Intereses:",
         sobremi_cumple: "Cumpleaños:",
