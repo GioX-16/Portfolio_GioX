@@ -179,7 +179,7 @@ video{
 /* SECCION INICIO */
 .inicio {
     background: linear-gradient(to top, rgba(156, 164, 168, 0.8), rgb(35, 77, 95)),
-        url(img/FondoGX.jpeg); 
+        url(img/backgrounds/FondoGX.jpeg); 
     background-size: 99%;
     height: 100vh;
     color: var(--text-primary);
@@ -883,7 +883,7 @@ video{
 
 .curriculum {
     background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-        url(img/back_social.png);
+        url(img/backgrounds/back_social.png);
     color: var(--text-primary);
     padding: 30px 20px;
 }
@@ -1191,7 +1191,7 @@ video{
 /* SECCION CONTACTO */
 
 .contacto{
-    background-image: url(img/contact_bg.png);
+    background-image: url(img/backgrounds/contact_bg.png);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     padding: 50px;
