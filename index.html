@@ -48,20 +48,47 @@
         </div>
 
         <main id="hero1" class="hero1">
-            <video muted autoplay loop>
-                <source src="/img/videos/vidgx.mp4"
-                    type="video/mp4">
-            </video>
-            <!-- Botón para la sección del video (escritorio) -->
-            <div class="cv-button-container desktop-only">
-                <a
-                    href="https://drive.google.com/file/d/1CpiGBvKcgUzGzTERZzN-WZzsEyJySTdo/view?usp=sharing"
-                    target="noopener">
-                    <button>
-                        Descargar CV <i class="fa-solid fa-download"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </a>
+            <div class="hero-slider" id="heroSlider">
+                <!-- Slide 1: Video Original -->
+                <div class="slide slide-video active">
+                    <video muted autoplay loop>
+                        <source src="/img/videos/vidgx.mp4" type="video/mp4">
+                    </video>
+                    <!-- Botón para la sección del video (escritorio) -->
+                    <div class="cv-button-container desktop-only">
+                        <a href="https://drive.google.com/file/d/1CpiGBvKcgUzGzTERZzN-WZzsEyJySTdo/view?usp=sharing" target="noopener">
+                            <button>
+                                Descargar CV <i class="fa-solid fa-download"></i>
+                                <span class="overlay"></span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Nuevo Diseño Hero -->
+                <div class="slide slide-image">
+                    <div class="hero-image-content">
+                        <div class="hero-text-col">
+                            <span class="hi-text">Hi,</span>
+                            <span class="name-intro">my name is</span>
+                            <h1 class="main-name">GIO</h1>
+                            <h2 class="sub-title">System Engineer</h2>
+                            
+                            <div class="cv-button-container desktop-only">
+                                <a href="https://drive.google.com/file/d/1CpiGBvKcgUzGzTERZzN-WZzsEyJySTdo/view?usp=sharing" target="noopener">
+                                    <button>
+                                        Descargar C.V.
+                                        <span class="overlay"></span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hero-img-col">
+                            <div class="hero-arch-bg"></div>
+                            <img src="img/hero/sandi.png" alt="Giovanny Sandino">
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
