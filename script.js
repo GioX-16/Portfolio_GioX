@@ -139,6 +139,11 @@ const translations = {
         nav_stack: "STACK",
         nav_certificados: "CERTIFICADOS",
         nav_cv: "CV",
+        hero_welcome: "Bienvenido",
+        hero_hi: "Hola, soy",
+        hero_name: "GIO",
+        hero_description: "Ingeniero de Sistemas y Desarrollador Web creando experiencias digitales con código limpio y diseño reflexivo.",
+        hero_cv_btn: "Descargar C.V.",
         hero_title: "Descargar CV",
         redes_title: "GIOVANNY SANDINO",
         redes_subtitle: "Ingeniero De Sistemas - Desarrollador Web - Diseñador UX/UI",
@@ -241,6 +246,11 @@ const translations = {
         nav_stack: "STACK",
         nav_certificados: "CERTIFICATIONS",
         nav_cv: "CV",
+        hero_welcome: "Welcome",
+        hero_hi: "Hi, I'm",
+        hero_name: "GIO",
+        hero_description: "System Engineer & Web Developer crafting digital experiences with clean code and thoughtful design.",
+        hero_cv_btn: "Download C.V.",
         hero_title: "Download CV",
         redes_title: "GIOVANNY SANDINO",
         redes_subtitle: "Systems Engineer - Web Developer - UX/UI Designer",
@@ -367,6 +377,21 @@ function applyTranslations(lang) {
     
     const heroBtn = document.querySelector('#hero1 .cv-button-container button');
     if (heroBtn) heroBtn.innerHTML = `${t.hero_title} <i class="fa-solid fa-download"></i><span class="overlay"></span>`;
+    
+    const editorialWelcome = document.querySelector('.hero-editorial .welcome-tag');
+    if (editorialWelcome) editorialWelcome.textContent = t.hero_welcome;
+    
+    const editorialHi = document.querySelector('.hero-editorial .hi-text');
+    if (editorialHi) editorialHi.textContent = t.hero_hi;
+    
+    const editorialName = document.querySelector('.hero-editorial .main-name');
+    if (editorialName) editorialName.textContent = t.hero_name;
+    
+    const editorialDesc = document.querySelector('.hero-editorial .hero-description');
+    if (editorialDesc) editorialDesc.textContent = t.hero_description;
+    
+    const editorialBtn = document.querySelector('.hero-editorial .cv-button-container button');
+    if (editorialBtn) editorialBtn.innerHTML = `<i class="fa-solid fa-arrow-down"></i>${t.hero_cv_btn}<span class="overlay"></span>`;
     
     const mobileHeroBtn = document.querySelector('#inicio .cv-button-container button');
     if (mobileHeroBtn) mobileHeroBtn.innerHTML = `${t.hero_title} <i class="fa-solid fa-download"></i><span class="overlay"></span>`;
