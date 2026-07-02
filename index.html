@@ -756,6 +756,32 @@
 
         <script src="script.js"></script>
         <script src="animations.js"></script>
+
+        <!-- VIDEO MODAL (mobile) -->
+        <div id="videoModal" class="video-modal">
+            <div class="video-modal-backdrop"></div>
+            <div class="video-modal-container">
+                <div class="video-modal-header">
+                    <span class="video-modal-label" id="modalLabel">Our Work</span>
+                    <button class="video-modal-btn-close" id="modalCloseBtn">&times;</button>
+                </div>
+                <div class="video-modal-video-wrapper landscape" id="videoWrapper">
+                    <video id="modalVideo" muted playsinline controls>
+                        <source src="/img/videos/portfovideo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-modal-footer">
+                    <button class="video-modal-control-btn" id="orientationToggle">
+                        <i class="fa-solid fa-rotate"></i>
+                        <span id="orientationLabel">Horizontal</span>
+                    </button>
+                    <button class="video-modal-control-btn" id="fullscreenToggle">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Fullscreen</span>
+                    </button>
+                </div>
+            </div>
+        </div>
         
         <!-- BOTON FLOTANTE DE WHATSAPP -->
         <a href="https://wa.me/50585142553" class="whatsapp-btn" target="_blank" rel="noopener">

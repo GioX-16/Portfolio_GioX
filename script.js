@@ -216,6 +216,7 @@ const translations = {
         portafolio_proy14_link: "",
         portfovideo_title: "Nuestro Trabajo",
         portfovideo_btn: "Ir a Proyectos",
+        portfovideo_btn_mobile: "Ver video",
         cv_title: "Curriculum",
         cv_educacion: "꧁ EDUCACION ꧂",
         cv_aprendizaje: "꧁ EN APRENDIZAJE ꧂",
@@ -325,6 +326,7 @@ const translations = {
         portafolio_proy14_link: "",
         portfovideo_title: "Our Work",
         portfovideo_btn: "Go to Projects",
+        portfovideo_btn_mobile: "Watch video",
         cv_title: "Curriculum",
         cv_educacion: "꧁ EDUCATION ꧂",
         cv_aprendizaje: "꧁ LEARNING ꧂",
@@ -401,7 +403,16 @@ function applyTranslations(lang) {
     if (portfovideoPhrase) portfovideoPhrase.textContent = t.portfovideo_title;
 
     const portfovideoBtn = document.querySelector('.portfovideo-btn');
-    if (portfovideoBtn) portfovideoBtn.textContent = `${t.portfovideo_btn} →`;
+    if (portfovideoBtn) {
+        if (window.innerWidth <= 768) {
+            portfovideoBtn.textContent = `▶ ${t.portfovideo_btn_mobile}`;
+        } else {
+            portfovideoBtn.textContent = `${t.portfovideo_btn} →`;
+        }
+    }
+
+    const modalLabel = document.getElementById('modalLabel');
+    if (modalLabel) modalLabel.textContent = t.portfovideo_title;
 
     const mobileHeroBtn = document.querySelector('#inicio .cv-button-container button');
     if (mobileHeroBtn) mobileHeroBtn.innerHTML = `${t.hero_title} <i class="fa-solid fa-download"></i><span class="overlay"></span>`;
@@ -567,4 +578,60 @@ document.addEventListener("DOMContentLoaded", function() {
     initTheme();
     initLanguage();
     initHeroSlider();
+
+    // Video Modal
+    const videoModal = document.getElementById('videoModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const orientationToggle = document.getElementById('orientationToggle');
+    const fullscreenToggle = document.getElementById('fullscreenToggle');
+    const videoWrapper = document.getElementById('videoWrapper');
+    const modalVideo = document.getElementById('modalVideo');
+    const orientationLabel = document.getElementById('orientationLabel');
+
+    document.querySelector('.portfovideo-btn')?.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            videoModal.classList.add('active');
+            if (modalVideo) {
+                modalVideo.currentTime = 0;
+                modalVideo.play().catch(() => {});
+            }
+        }
+    });
+
+    modalCloseBtn?.addEventListener('click', function() {
+        videoModal.classList.remove('active');
+        if (modalVideo) modalVideo.pause();
+    });
+
+    document.querySelector('.video-modal-backdrop')?.addEventListener('click', function() {
+        videoModal.classList.remove('active');
+        if (modalVideo) modalVideo.pause();
+    });
+
+    orientationToggle?.addEventListener('click', function() {
+        const isLandscape = videoWrapper.classList.contains('landscape');
+        if (isLandscape) {
+            videoWrapper.classList.remove('landscape');
+            videoWrapper.classList.add('portrait');
+            orientationLabel.textContent = currentLang === 'es' ? 'Vertical' : 'Portrait';
+        } else {
+            videoWrapper.classList.remove('portrait');
+            videoWrapper.classList.add('landscape');
+            orientationLabel.textContent = currentLang === 'es' ? 'Horizontal' : 'Landscape';
+        }
+    });
+
+    fullscreenToggle?.addEventListener('click', function() {
+        const container = document.querySelector('.video-modal-container');
+        if (!document.fullscreenElement) {
+            container?.requestFullscreen().catch(() => {});
+        } else {
+            document.exitFullscreen().catch(() => {});
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        applyTranslations(currentLang);
+    });
 });

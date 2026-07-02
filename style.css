@@ -672,6 +672,131 @@ video {
     }
 }
 
+/* VIDEO MODAL */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.video-modal.active {
+    display: block;
+}
+
+.video-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.video-modal-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    z-index: 2;
+}
+
+.video-modal-label {
+    color: #fff;
+    font-family: 'Righteous', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.video-modal-btn-close {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.video-modal-btn-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.video-modal-video-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: calc(100% - 100px);
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-modal-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.video-modal-video-wrapper.landscape {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 100%;
+}
+
+.video-modal-video-wrapper.portrait {
+    aspect-ratio: 9 / 16;
+    max-height: 80%;
+    width: auto;
+}
+
+.video-modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 12px;
+    z-index: 2;
+}
+
+.video-modal-control-btn {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    color: #fff;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s;
+}
+
+.video-modal-control-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
 /* SECCION INICIO */
 .inicio {
     background: linear-gradient(to top, rgba(156, 164, 168, 0.8), rgb(35, 77, 95)),
