@@ -214,6 +214,8 @@ const translations = {
         portafolio_proy13_link: "",
         portafolio_proy14_title: "ECOMMERCE",
         portafolio_proy14_link: "",
+        portfovideo_title: "Nuestro Trabajo",
+        portfovideo_btn: "Ir a Proyectos",
         cv_title: "Curriculum",
         cv_educacion: "꧁ EDUCACION ꧂",
         cv_aprendizaje: "꧁ EN APRENDIZAJE ꧂",
@@ -321,6 +323,8 @@ const translations = {
         portafolio_proy13_link: "",
         portafolio_proy14_title: "ECOMMERCE",
         portafolio_proy14_link: "",
+        portfovideo_title: "Our Work",
+        portfovideo_btn: "Go to Projects",
         cv_title: "Curriculum",
         cv_educacion: "꧁ EDUCATION ꧂",
         cv_aprendizaje: "꧁ LEARNING ꧂",
@@ -392,7 +396,13 @@ function applyTranslations(lang) {
     
     const editorialBtn = document.querySelector('.hero-editorial .cv-button-container button');
     if (editorialBtn) editorialBtn.innerHTML = `<i class="fa-solid fa-arrow-down"></i>${t.hero_cv_btn}<span class="overlay"></span>`;
-    
+
+    const portfovideoPhrase = document.querySelector('.portfovideo-phrase');
+    if (portfovideoPhrase) portfovideoPhrase.textContent = t.portfovideo_title;
+
+    const portfovideoBtn = document.querySelector('.portfovideo-btn');
+    if (portfovideoBtn) portfovideoBtn.textContent = `${t.portfovideo_btn} →`;
+
     const mobileHeroBtn = document.querySelector('#inicio .cv-button-container button');
     if (mobileHeroBtn) mobileHeroBtn.innerHTML = `${t.hero_title} <i class="fa-solid fa-download"></i><span class="overlay"></span>`;
     
