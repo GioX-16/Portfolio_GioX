@@ -112,16 +112,20 @@ function toggleTheme() {
 }
 
 function initTheme() {
-    const savedTheme = localStorage.getItem("theme");
-    const themeIcon = document.getElementById("themeIcon");
-    
-    if (savedTheme) {
-        document.body.setAttribute("data-theme", savedTheme);
-        if (savedTheme === "light") {
-            themeIcon.className = "fa-solid fa-sun";
+    try {
+        const savedTheme = localStorage.getItem("theme");
+        const themeIcon = document.getElementById("themeIcon");
+        
+        if (savedTheme) {
+            document.body.setAttribute("data-theme", savedTheme);
+            if (savedTheme === "light" && themeIcon) {
+                themeIcon.className = "fa-solid fa-sun";
+            }
+        } else {
+            document.body.setAttribute("data-theme", "dark");
         }
-    } else {
-        document.body.setAttribute("data-theme", "dark");
+    } catch (e) {
+        // Silently fail - theme is non-critical
     }
 }
 
@@ -579,8 +583,16 @@ document.addEventListener("DOMContentLoaded", function() {
     initLanguage();
     initHeroSlider();
 
-    // Video Modal
+    window.addEventListener('resize', function() {
+        applyTranslations(currentLang);
+    });
+});
+
+// Video Modal - separated so it can't be blocked by other init errors
+document.addEventListener("DOMContentLoaded", function() {
     const videoModal = document.getElementById('videoModal');
+    if (!videoModal) return; // modal not in DOM, skip
+
     const modalCloseBtn = document.getElementById('modalCloseBtn');
     const orientationToggle = document.getElementById('orientationToggle');
     const fullscreenToggle = document.getElementById('fullscreenToggle');
@@ -611,15 +623,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     orientationToggle?.addEventListener('click', function() {
-        const isLandscape = videoWrapper.classList.contains('landscape');
+        const isLandscape = videoWrapper?.classList.contains('landscape');
         if (isLandscape) {
             videoWrapper.classList.remove('landscape');
             videoWrapper.classList.add('portrait');
-            orientationLabel.textContent = currentLang === 'es' ? 'Vertical' : 'Portrait';
+            if (orientationLabel) orientationLabel.textContent = currentLang === 'es' ? 'Vertical' : 'Portrait';
         } else {
-            videoWrapper.classList.remove('portrait');
-            videoWrapper.classList.add('landscape');
-            orientationLabel.textContent = currentLang === 'es' ? 'Horizontal' : 'Landscape';
+            videoWrapper?.classList.remove('portrait');
+            videoWrapper?.classList.add('landscape');
+            if (orientationLabel) orientationLabel.textContent = currentLang === 'es' ? 'Horizontal' : 'Landscape';
         }
     });
 
@@ -630,9 +642,5 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             document.exitFullscreen().catch(() => {});
         }
-    });
-
-    window.addEventListener('resize', function() {
-        applyTranslations(currentLang);
     });
 });
