@@ -406,10 +406,8 @@ function applyTranslations(lang) {
     if (portfovideoBtn) {
         if (window.innerWidth <= 768) {
             portfovideoBtn.textContent = `▶ ${t.portfovideo_btn_mobile}`;
-            portfovideoBtn.removeAttribute('href');
         } else {
             portfovideoBtn.textContent = `${t.portfovideo_btn} →`;
-            portfovideoBtn.href = '#portafolio';
         }
     }
 
@@ -590,14 +588,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalVideo = document.getElementById('modalVideo');
     const orientationLabel = document.getElementById('orientationLabel');
 
-    document.querySelector('.portfovideo-btn')?.addEventListener('click', function(e) {
+    document.querySelector('.portfovideo-btn')?.addEventListener('click', function() {
         if (window.innerWidth <= 768) {
-            e.preventDefault();
             videoModal.classList.add('active');
             if (modalVideo) {
                 modalVideo.currentTime = 0;
                 modalVideo.play().catch(() => {});
             }
+        } else {
+            document.querySelector('#portafolio')?.scrollIntoView({ behavior: 'smooth' });
         }
     });
 
