@@ -406,8 +406,10 @@ function applyTranslations(lang) {
     if (portfovideoBtn) {
         if (window.innerWidth <= 768) {
             portfovideoBtn.textContent = `▶ ${t.portfovideo_btn_mobile}`;
+            portfovideoBtn.removeAttribute('href');
         } else {
             portfovideoBtn.textContent = `${t.portfovideo_btn} →`;
+            portfovideoBtn.href = '#portafolio';
         }
     }
 
