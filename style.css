@@ -2551,3 +2551,128 @@ footer .arriba{
         display: block;
     }
 }
+
+/* ================= MOBILE VIDEOS & LAYOUT REORDER (max-width: 768px) ================= */
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #hero1 {
+        order: 1;
+        min-height: auto !important;
+        height: auto !important;
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+        position: relative !important;
+        overflow: visible !important;
+        margin-top: 75px !important; /* Space below fixed header */
+        display: block !important;
+        background-color: var(--bg-primary);
+    }
+    
+    #hero1 .hero-slider {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+    }
+    
+    #hero1 .slide {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+    }
+    
+    #hero1 video {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        z-index: 1 !important;
+    }
+
+    #portfovideo {
+        order: 2;
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+        position: relative !important;
+        overflow: hidden !important;
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+        background-color: var(--bg-primary);
+    }
+
+    #portfovideo video {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        z-index: 1 !important;
+    }
+
+    .portfovideo-overlay {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 2 !important;
+    }
+
+    .portfovideo-content {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        bottom: auto !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 3 !important;
+        width: 90% !important;
+        padding: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .portfovideo-phrase {
+        font-size: 13px !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .portfovideo-btn {
+        font-size: 11px !important;
+        padding: 6px 16px !important;
+    }
+
+    #inicio {
+        order: 3;
+    }
+
+    #portafolio { order: 4; }
+    #sobremi { order: 5; }
+    #skills { order: 6; }
+    #stack { order: 7; }
+    #certifications { order: 8; }
+    footer { order: 9; }
+}
+
+/* Specific smaller screen adjustments (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    #hero1 {
+        margin-top: 68px !important; /* slightly smaller header offset */
+    }
+}
