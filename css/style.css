@@ -800,7 +800,7 @@ video {
 /* SECCION INICIO */
 .inicio {
     background: linear-gradient(to top, rgba(156, 164, 168, 0.8), rgb(35, 77, 95)),
-        url(img/backgrounds/FondoGX.jpeg); 
+        url(../assets/images/backgrounds/FondoGX.jpeg); 
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -1930,7 +1930,7 @@ video {
 /* SECCION CONTACTO */
 
 .contacto{
-    background-image: url(img/backgrounds/contact_bg.png);
+    background-image: url(../assets/images/backgrounds/contact_bg.png);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     padding: 50px;
